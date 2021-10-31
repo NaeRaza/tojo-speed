@@ -1,0 +1,153 @@
+.navbar {
+    background: rgb(1, 44, 80);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navbar-logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.logo{
+    height: 60px;
+    font-size: 20px;
+}
+
+
+.right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+    
+}
+
+.nav-config{
+    text-decoration: none;
+    color: #181818;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    background-color: white;
+    border-radius: 14px;
+    margin-right: 16px;
+}
+
+.nav-config:hover{
+    background-color: #05a3ca;
+}
+
+.switch-lang{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.lang-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-out;
+}
+.lang-menu{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding: 8px 22px;
+    background-color: #181818;
+    border-radius: 14px;
+
+}
+
+.lang-link.active{
+    border-bottom-left-radius: none;
+    border-bottom-right-radius: none;
+    z-index: 555;
+}
+
+.caret-down{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.lang-list{
+    display: none;
+    position: absolute;
+    top: 32px;
+    list-style: none;
+    width: 100%;
+    
+}
+.lang-list li{
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #181818;
+}
+.lang-list li:last-child{
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.lang-list li:hover{
+    background-color: #1888ff;
+    transition: all 0.2s ease-out;
+
+}
+
+.lang-link.active .lang-menu{
+    border-bottom-left-radius:unset;
+    border-bottom-right-radius: unset;
+}
+
+.lang-link.active .lang-list{
+    display: block;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media (max-width: 850px) {
+
+    .navbar-logo{
+        flex: none;
+        margin: 0;
+        padding-left: 12px ;
+    }
+
+    .logo{
+        height: 60px;
+        width: auto;
+        border-radius: 10px;
+    }
+
+    .nav-config{
+        flex: none;
+        align-items: center;
+        font-size: 12px;
+        padding: 8px 14px;
+        margin-right: 5px;
+    }
+
+    .lang-menu{
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .lang-list li{
+        font-size: 12px;
+    }
+}
